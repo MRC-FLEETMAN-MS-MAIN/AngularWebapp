@@ -86,11 +86,19 @@
        src: dockerfile
        dest: /home/ec2-user/angular/target/
        mode: 0700
+       
+       
+       
+  - name: Send the docker file across to the new instance
+    copy: 
+       src: docker-compose.yml
+       dest: /home/ec2-user/angular/target/
+       mode: 0700
 
   - name: Send the deployment across to the new instance
     copy: 
        src: dist/micro1
-       dest: /home/ec2-user/pos/target/micro1
+       dest: /home/ec2-user/angular/target/micro1
        mode: 0700
 
   - name: Remove exisiting docker files
