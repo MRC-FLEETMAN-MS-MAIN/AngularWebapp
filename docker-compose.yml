@@ -1,0 +1,11 @@
+version: '3'
+services:
+    angular:
+        container_name: frontendfleetman
+        build: .
+        #only if you are serving the compiled angular files or static content using nginx
+         #volumes:
+           # - ./frontend/dist/mean-course:/usr/share/nginx/html
+        ports:
+            - '8080:80'
+

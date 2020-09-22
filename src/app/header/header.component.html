@@ -1,0 +1,18 @@
+
+<mat-toolbar color="primary">
+
+
+  <span>USERS MICROSERVICE</span>
+
+    <a *ngIf="!userIsAuthenticated" routerLink=""><a mat-button routerLinkActive="mat-accent">Home</a> </a>
+    <a *ngIf="!userIsAuthenticated" routerLink="/login"><a mat-button routerLinkActive="mat-accent">Login</a> </a>
+    <a *ngIf="userIsAuthenticated" routerLink="/view"><a mat-button routerLinkActive="mat-accent">Fetch</a> </a>
+    <a *ngIf="userIsAuthenticated" routerLink="/charter"><a mat-button routerLinkActive="mat-accent">Chart</a> </a>
+    <a *ngIf="userIsAuthenticated" routerLink="/mapping"><a mat-button routerLinkActive="mat-accent">Map</a> </a>
+    <a *ngIf="userIsAuthenticated" routerLink="/fleetman"><a mat-button routerLinkActive="mat-accent">Fleetman</a> </a>
+    <a routerLink="/test"><a mat-button routerLinkActive="mat-accent">JWT</a> </a>
+    <ul *ngIf="userIsAuthenticated">
+      <button routerLinkActive="mat-accent" (click)="onLogout()" >LOGOUT</button>
+    </ul>
+
+</mat-toolbar>
