@@ -147,7 +147,7 @@
     shell: chmod +x /usr/local/bin/docker-compose
 
   - name: Build the Docker image and container
-    command: docker-compose up
+    command: docker-compose -f "docker-compose.yml" up
     args:
             chdir: angular/target/
 
