@@ -89,7 +89,7 @@
        
        
        
-  - name: Send the docker file across to the new instance
+  - name: Send the docker-compose file across to the new instance
     copy: 
        src: docker-compose.yml
        dest: /home/ec2-user/angular/target/
@@ -121,6 +121,12 @@
         name:
           - docker
     become: yes
+    
+  - name: Install DockerCompose
+    yum:
+        name:
+          - docker-compose
+    become: yes
 
   - name: "Starting and Enabling Docker service"
     service:
@@ -136,12 +142,12 @@
          append: yes
     become: yes
 
-#  - name: Build the Docker image
-#    command: docker build --tag vehtra:1.0 .
-#    args:
-#            chdir: pos/target/
+  - name: Build the Docker image and container
+    command: docker-compose up
+    args:
+            chdir: angular/target/
 
-#    become: yes
+    become: yes
 
   
 
