@@ -145,7 +145,23 @@
   - name: Set binary exec for  docker compose
     become: true
     shell: chmod +x /usr/local/bin/docker-compose
-    
+ 
+ 
+  - name: Build the Docker image
+    command: docker build --tag webapp:1.0 .
+    args:
+            chdir: angular/target/
+
+    become: yes
+
+  
+
+  - name: Run the Docker container
+    command: docker run -d  --restart always --publish 8080:80 --name bb webapp:1.0
+    become: yes
+
+ 
+ 
     
  # - name: Build the Docker image and container
  #   docker_compose:
@@ -159,11 +175,11 @@
 
 #    become: yes
 
-  - name: Build the Docker image and container
-    shell: docker-compose up
-    args:
-      chdir: angular/target/
-    become: yes
+#  - name: Build the Docker image and container
+#    shell: docker-compose up
+#    args:
+#      chdir: angular/target/
+#    become: yes
 
   
 
