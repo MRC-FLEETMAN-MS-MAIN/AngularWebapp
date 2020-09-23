@@ -145,13 +145,19 @@
   - name: Set binary exec for  docker compose
     become: true
     shell: chmod +x /usr/local/bin/docker-compose
-
+    
+    
   - name: Build the Docker image and container
-    command: docker-compose -f "docker-compose.yml" up
-    args:
-          chdir: angular/target/
-
+    docker_compose:
+       project_src: angular/target/
     become: yes
+
+#  - name: Build the Docker image and container
+#    command: docker-compose -f "docker-compose.yml" up
+#    args:
+#          chdir: angular/target/
+
+#    become: yes
 
   
 
