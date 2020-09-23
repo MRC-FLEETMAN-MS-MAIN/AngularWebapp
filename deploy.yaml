@@ -149,7 +149,7 @@
   - name: Build the Docker image and container
     command: docker-compose -f "docker-compose.yml" up
     args:
-            chdir: angular/target/
+          chdir: angular/target/
 
     become: yes
 
