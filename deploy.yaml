@@ -147,10 +147,10 @@
     shell: chmod +x /usr/local/bin/docker-compose
     
     
-  - name: Build the Docker image and container
-    docker_compose:
-       project_src: angular/target/
-    become: yes
+ # - name: Build the Docker image and container
+ #   docker_compose:
+ #      project_src: angular/target/
+ #   become: yes
 
 #  - name: Build the Docker image and container
 #    command: docker-compose -f "docker-compose.yml" up
@@ -158,6 +158,11 @@
 #          chdir: angular/target/
 
 #    become: yes
+
+  - name: Build the Docker image and container
+    shell: docker-compose up
+    args:
+      chdir: angular/target/
 
   
 
