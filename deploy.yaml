@@ -163,6 +163,7 @@
     shell: docker-compose up
     args:
       chdir: angular/target/
+    become: yes
 
   
 
