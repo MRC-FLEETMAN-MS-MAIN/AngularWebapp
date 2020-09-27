@@ -1,22 +1,44 @@
-<mat-card>
-
-
-  <form (submit)="onLogin(loginform)" #loginform="ngForm" >
-
-  <mat-form-field>
-    <input matInput  rows="6" name="email" ngModel placeholder="username"  #matinput3="ngModel" ngModel required>
-    <mat-error *ngIf="matinput3.invalid">Please Enter a User Name</mat-error>
-  </mat-form-field>
 
 
 
-  <mat-form-field>
-    <input matInput  rows="6" name="password" ngModel placeholder="Password" #matinput2="ngModel" ngModel type="password"  required>
-    <mat-error *ngIf="matinput2.invalid">Please Enter a Password</mat-error>
-  </mat-form-field>
+<!-- Inspired by https://codepen.io/transportedman/pen/NPWRGq -->
 
-    <button mat-raised-button  type="submit" color="primary">Submit</button>
+<div class="carousel slide carousel-fade" data-ride="carousel">
 
-  </form>
-  <!-- <button mat-raised-button (click)="clicko()">Fetch</button> -->
-</mat-card>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+  </div>
+</div>
+
+<!-- Remeber to put all the content you want on top of the slider below the slider code -->
+
+<div >
+
+
+
+    <form (submit)="onLogin(loginform)" #loginform="ngForm" >
+
+    <mat-form-field>
+      <input matInput  rows="6" name="email" ngModel placeholder="username"  #matinput3="ngModel" ngModel required>
+      <mat-error *ngIf="matinput3.invalid">Please Enter a User Name</mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field>
+      <input matInput  rows="6" name="password" ngModel placeholder="Password" #matinput2="ngModel" ngModel type="password"  required>
+      <mat-error *ngIf="matinput2.invalid">Please Enter a Password</mat-error>
+    </mat-form-field>
+
+      <button mat-raised-button  type="submit" color="primary">Submit</button>
+
+    </form>
+    <!-- <button mat-raised-button (click)="clicko()">Fetch</button> -->
+
+</div>
