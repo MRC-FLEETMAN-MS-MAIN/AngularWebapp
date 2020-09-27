@@ -66,7 +66,7 @@ import {AuthInterceptor} from './auth/login/auth-interceptor';
     BrowserAnimationsModule,
     MatTableModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBPesQPPgMpJpYyjgRUAVWuyl_zZGmyTqE'
+      apiKey: 'AIzaSyBMC1e848W2FNZ97w6Q116iAYUc1MF9bOc'
     })
 
   ],
