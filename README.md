@@ -25,5 +25,17 @@ Smart Fleet Management is a micro services based system which can be deployed in
 
 ### REQUIREMENT ANALYSIS
 
+The requirements were formulated to form different user stories and usecase diagrams as a part of this phase.
+
+### SYSTEM DESIGN
+
+The system was developed as a cloud ready microservices setup. The system employs fault tolerant techniques like Asynchronous communication and High Availability-Scalable techniques like the implmentation of Load Balancer, Circuit breakers, database hosted in cloud. The sequence diagram and class diagram of some of the usecases are listed below.
+
+
+The system has both Hardware part and Software part. 
+
+The hardware part possesses a Raspberry Pi which acts a IoT Gateway. We have all the sensor data coming to Raspberry Pi from the edge sensors connected in the vehicle. The PIR sensor connected to ESP8266 chip publishes to Raspberry Pi over MQTT protocol where the Pi acts as the broker. The Pi further transfers this motion data to AWS IoT things over MQTT protocol making it a fault resilient system as the data is sent to AWS IoT thing where AWS IoT acts as MQTT broker. Also the QoS of MQTT is set as 1 so that active transfer of messages happen and no data is lost within the broker. 
+
+Siilarly the  pressure/temperature data from DHT11 sensors 
 
 
