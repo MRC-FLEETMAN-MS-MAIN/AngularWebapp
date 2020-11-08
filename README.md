@@ -73,6 +73,8 @@ Next we had used Ansible as our configuration Management tools to push configura
 
 #### Different Strategeis adopted in AWS to build a fault tolerant, performacne oriented and resilient system
 
+As a first step, Using Ansible we rolled out a new EC2 instance with elastic i[ (static public 
+
 
 
 
