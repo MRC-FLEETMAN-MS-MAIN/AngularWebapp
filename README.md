@@ -73,7 +73,28 @@ Next we had used Ansible as our configuration Management tools to push configura
 
 #### Different Strategeis adopted in AWS to build a fault tolerant, performacne oriented and resilient system
 
-As a first step, Using Ansible we rolled out a new EC2 instance with elastic i[ (static public 
+As a first step, using Ansible we rolled out a new EC2 instance with elastic ip (static public ip). Inside this EC2 instance we run a Rabbit MQ  docker container. The security groups and network is configured accordingly so that the Rabbit mq running inside docker container is accessible across the elastic ip across the respective port.
+
+Next for the Spring cloud config server, we developed a Ansible playbook that it rolls out a new EC2 instance with autoscaling group and launch configuration. We intend to create 2 instacnes of COnfigurtaion server service for the smooth performance of the system. ALso we create a elastic laod balancer (Application load balancer) which can be accesed by its dns name. The  elastic load balancer inturn balances the incoming requests to the different instances.
+
+Similarly we create a EC2 instance running dokcer container of eureka registry using ansible playbook and bounded to static ip. This same pattern applied to remaining microservices. 
+
+Also we intend to run logstash containers in every microservice EC2 instances to accumulate the log data. We them run another EC2 instance with Elasticsearch and Kibana that is bounded to every logstash containers in all EC2 instances.
+
+The database hasnt been changed since we were already using AWS MySQL db. 
+
+We had used multi git organization pipeline feature in Jenkins to trigger the build and deployment. The multi git organization feature would auto reocngnize the Jenkins pipeline file in each microservice repository in the organization anf run the same. Each pipleine file eventually triggered the ansible playbook causing the EC2 instances to be populated and deploy systrem in live.
+
+Initally we created a ansible controller node ( running in manually created aws ec2 instance) and using this node we created another ec2 instance hosting Jenkins Server. This Jenkins server was configured and coupled to our Git repo so that any new commits (configured with hooks) would auto trigger the build process and deployment. 
+
+Most important we even came out with blue-green deployment techniques which is a software engineering technique making chanegs to web,app or database server by swapping alternating production and staging servers. So everytime we commit a new code in Git repo, it auto triggers the Jenkins pipleine and triggers thge build procerss. The build porcess would create a new EC2 instance with new fetaures and tag the new instane as greem. The old running EC2 instance is tagged as blue and eventually deleted. 
+
+We had even used Ansiblke features like ANsible inventory to ssh into ec2 instacmce using their tag names for further instllation and configuration.
+
+Now that we had deployed ourt system in local environment and AWS cloud we were enthralled to deploy our system ina Kuberntes cluster. A local K8S set up waa developed using MiniKube. where we had one master cluster and where we ran our microservices as K8S deployments. The deplyments has muktple instance of pods( our microservice docker containers running). 
+
+Before deplying into k8S we had to push our docker images to docker repository making our k8S deplyment easy. After the docker images were pushed to repository we created different deplyments to get the  container doplyed in the local minikube k8s clouster. For testing we had created deployments with 1 replicas of each microservices. We had created Services in minikube cluster to couple to the deployments. All the pods in the deployments were connected using K8S DNS server and we had only connected the front end web app deploymen to a specific nodeport via the service. Using the port and the minikube ip we were able to test the system running in K8S minikube cluster. 
+
 
 
 
