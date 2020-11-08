@@ -93,7 +93,24 @@ We had even used Ansiblke features like ANsible inventory to ssh into ec2 instac
 
 Now that we had deployed ourt system in local environment and AWS cloud we were enthralled to deploy our system ina Kuberntes cluster. A local K8S set up waa developed using MiniKube. where we had one master cluster and where we ran our microservices as K8S deployments. The deplyments has muktple instance of pods( our microservice docker containers running). 
 
-Before deplying into k8S we had to push our docker images to docker repository making our k8S deplyment easy. After the docker images were pushed to repository we created different deplyments to get the  container doplyed in the local minikube k8s clouster. For testing we had created deployments with 1 replicas of each microservices. We had created Services in minikube cluster to couple to the deployments. All the pods in the deployments were connected using K8S DNS server and we had only connected the front end web app deploymen to a specific nodeport via the service. Using the port and the minikube ip we were able to test the system running in K8S minikube cluster. 
+Before deplying into k8S we had to push our docker images to docker repository making our k8S deplyment easy. After the docker images were pushed to repository we created different deplyments to get the  container deployed in the local minikube k8s clouster. For testing we had created deployments with 1 replicas of each microservices. We had created Services in minikube cluster to couple to the deployments. All the pods in the deployments were connected using K8S DNS server and we had only connected the front end web app deploymen to a specific nodeport via the service. Using this port and the minikube ip we were able to test the system running in K8S minikube cluster. 
+
+A basic version of this system was tried and deployed in K8S cluster in AWS using KOPS configuration. Different K8S concepts like specific MEmory Request, CPU request for pods were handled for uplifting the overall performance of the system. We had also established horizontal pod scaling concept once the pods health was crtical and the once the requests were overloaded. We also established the concrpt of Readliness and liveness problem to check if the pods was ready enough to accept request from the webend. 
+
+Ingress controllers within the K8S cluster in minikube was established to redirect the request to all the pods as per the domain dns names. This was done as an attempt to use single service via the node port. The same idea was adapted whem the system is deployed in AWS to  reduce the use of multiple load balancers across AWS.
+
+The idea of stateful sets was planned initally so that we have multiple rabbit mq docker containers running across K8S cluster howver this was dropped later.
+
+The deployment of our fleetman system in our k8s cluster(minikube) was automated using Jenkins CI/CD built. THe pipleines was created which in turn triggers the deplyment scripts to deply the K8S deployments into the kubernetes cluster.
+
+
+Regarding the frontend web microservice, the angualr application was deployed in a nginx container which act as a static web server and  Reverse proxy. The K8S deployment of the same fleetman management system is done in another organziation and the link for the same is <a href="https://github.com/fleetmanMS-K8S"> K8S Fleetman management system deployment </a>
+
+
+
+
+
+
 
 
 
