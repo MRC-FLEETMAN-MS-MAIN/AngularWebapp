@@ -199,7 +199,7 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 Regarding the frontend web microservice, the angualr application was deployed in a nginx container which act as a static web server and  Reverse proxy. The K8S deployment of the same fleetman management system is done in another organziation and the link for the same is <a href="https://github.com/fleetmanMS-K8S"> K8S Fleetman management system deployment </a>
 
 
-The commands used to construct docker images and containers have been put in the <a href="https://github.com/MRC-FLEETMAN-MS-MAIN/AngularWebapp/blob/master/MS_Info.docxtext"> file</a> which can be reffered while deploying and building the system. 
+The commands used to construct docker images and containers have been put in the <a href="https://github.com/MRC-FLEETMAN-MS-MAIN/AngularWebapp/blob/master/MS_Info.pdf"> file</a> which can be reffered while deploying and building the system. 
 
 
 
