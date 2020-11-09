@@ -121,6 +121,14 @@ The idea of stateful sets was planned initally so that we have multiple rabbit m
 
 The deployment of our fleetman system in our k8s cluster(minikube) was automated using Jenkins CI/CD built. THe pipleines was created which in turn triggers the deplyment scripts to deply the K8S deployments into the kubernetes cluster.
 
+### JENKINS CI/CD PIPELINE 
+
+<div align="center">
+<Image src="images/fleetman-github-organization.JPG" class="center" style="width:50%">
+</div>
+
+
+
 
 Regarding the frontend web microservice, the angualr application was deployed in a nginx container which act as a static web server and  Reverse proxy. The K8S deployment of the same fleetman management system is done in another organziation and the link for the same is <a href="https://github.com/fleetmanMS-K8S"> K8S Fleetman management system deployment </a>
 
