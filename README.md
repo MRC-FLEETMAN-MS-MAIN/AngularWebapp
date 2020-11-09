@@ -126,6 +126,21 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 <div align="center">
 <Image src="images/fleetman-github-organization.JPG" class="center" style="width:50%">
 </div>
+  
+<div align="center">
+<Image src="images/fleetman-postracker-pipeline.JPG" class="center" style="width:50%">
+</div>
+  
+### ELK STACK
+
+<div align="center">
+<Image src="images/elastic_ms.JPG" class="center" style="width:50%">
+</div>
+  
+  
+<div align="center">
+<Image src="images/kibana_Micro_MS.JPG" class="center" style="width:50%">
+</div>
 
 
 
