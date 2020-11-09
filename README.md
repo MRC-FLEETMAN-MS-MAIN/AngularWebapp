@@ -40,6 +40,10 @@ The requirements were formulated to form different user stories and usecase diag
 ### SYSTEM DESIGN
 
 <div align="center">
+<Image src="images/SequenceDiagram.JPG" class="center" style="width:50%">
+</div>
+
+<div align="center">
 <Image src="images/ClassDiagram.JPG" class="center" style="width:50%">
 </div>
 
