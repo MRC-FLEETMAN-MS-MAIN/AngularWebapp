@@ -39,6 +39,10 @@ The requirements were formulated to form different user stories and usecase diag
 
 ### SYSTEM DESIGN
 
+<div align="center">
+<Image src="images/ClassDiagram.JPG" class="center" style="width:50%">
+</div>
+
 The system was developed as a cloud ready microservices setup. The system employs fault tolerant techniques like Asynchronous communication and High Availability-Scalable techniques like the implmentation of Load Balancer, Circuit breakers, database hosted in cloud. The sequence diagram and class diagram of some of the usecases are listed below.
 
 
