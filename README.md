@@ -134,7 +134,7 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
  
  
 <div align="center">
-<Image src="images/K8S_MINIKUBE_4.png" class="center" style="width:50%">
+<Image src="images/K8S_55.png" class="center" style="width:50%">
 </div>
  
 
