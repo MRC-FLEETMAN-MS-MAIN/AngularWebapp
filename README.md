@@ -123,14 +123,14 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 
 ### SYSTEM DESIGN BLOCK DIAGRAM
 
-#### AWS CLOUD DEPLOYMENT
+#### <ins>AWS CLOUD DEPLOYMENT</ins>
 
 <div align="center">
 <Image src="images/BLOCKO1.png" class="center" style="width:50%">
 </div>
   
  
- #### KUBERNETES MINIKUBE DEPLOYMENT
+ #### <ins>KUBERNETES MINIKUBE DEPLOYMENT</ins>
  
  
 <div align="center">
