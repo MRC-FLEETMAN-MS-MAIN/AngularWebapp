@@ -121,6 +121,26 @@ The idea of stateful sets was planned initally so that we have multiple rabbit m
 
 The deployment of our fleetman system in our k8s cluster(minikube) was automated using Jenkins CI/CD built. THe pipleines was created which in turn triggers the deplyment scripts to deply the K8S deployments into the kubernetes cluster.
 
+### SYSTEM DESIGN BLOCK DIAGRAM
+
+#### AWS CLOUD DEPLOYMENT
+
+<div align="center">
+<Image src="images/BLOCKO1.png" class="center" style="width:50%">
+</div>
+  
+ 
+ #### KUBERNETES MINIKUBE DEPLOYMENT
+ 
+ 
+<div align="center">
+<Image src="images/K8S_MINIKUBE_4.png" class="center" style="width:50%">
+</div>
+ 
+
+
+
+
 ### JENKINS CI/CD PIPELINE 
 
 <div align="center">
@@ -178,6 +198,8 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 
 Regarding the frontend web microservice, the angualr application was deployed in a nginx container which act as a static web server and  Reverse proxy. The K8S deployment of the same fleetman management system is done in another organziation and the link for the same is <a href="https://github.com/fleetmanMS-K8S"> K8S Fleetman management system deployment </a>
 
+
+The commands used to construct docker images and containers have been put in the <a> href="https://github.com/MRC-FLEETMAN-MS-MAIN/AngularWebapp/blob/master/MS_Info.docxtext" </a> file which can be reffered while deploying and building the system. 
 
 
 
