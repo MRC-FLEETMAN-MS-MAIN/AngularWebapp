@@ -131,7 +131,7 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 <Image src="images/fleetman-postracker-pipeline.JPG" class="center" style="width:50%">
 </div>
   
-### ELK STACK
+### ELASTIC LOGSTASH KIBANA LOGS 
 
 <div align="center">
 <Image src="images/elastic_ms.JPG" class="center" style="width:50%">
@@ -141,6 +141,37 @@ The deployment of our fleetman system in our k8s cluster(minikube) was automated
 <div align="center">
 <Image src="images/kibana_Micro_MS.JPG" class="center" style="width:50%">
 </div>
+  
+  
+### FLEETMAN MANAGEMENT SYSTEM 
+
+  
+<div align="center">
+<Image src="images/MS1.JPG" class="center" style="width:50%">
+</div>
+  
+  
+<div align="center">
+<Image src="images/MS3.JPG" class="center" style="width:50%">
+</div>
+  
+<div align="center">
+<Image src="images/MS4.JPG" class="center" style="width:50%">
+</div>
+  
+  <div align="center">
+<Image src="images/MS5.JPG" class="center" style="width:50%">
+</div>
+  
+    
+ <div align="center">
+<Image src="images/MS7.JPG" class="center" style="width:50%">
+</div>
+  
+
+  
+  
+
 
 
 
