@@ -23,7 +23,17 @@ Smart Fleet Management is a micro services based system which can be deployed in
 
 ## SDLC PHASE OF FLEETMAN MANAGEMENT SYSTEM
 
-### REQUIREMENT ANALYSIS
+### REQUIREMENT ANALYSIS AND PLANNING 
+
+<div align="center">
+<Image src="images/Userstory.JPG" class="center" style="width:50%">
+</div>
+  
+  
+<div align="center">
+<Image src="images/IMG_20201024_231649.jpg" class="center" style="width:50%">
+</div>
+  
 
 The requirements were formulated to form different user stories and usecase diagrams as a part of this phase.
 
