@@ -69,7 +69,7 @@ export class UserService{
 
      // this.http.post<UserResponse>("http://localhost:8011/user-microservice/user",postData,httpOptions).subscribe((res)=>{
 
-      this.http.post<any>("http://34.195.41.137:8011/user-microservice/authenticate",loginData,{ responseType: 'text' as 'json' }).subscribe((res)=>{
+      this.http.post<any>("http://34.195.41.137:8011/user-microservice/login",loginData,{ responseType: 'text' as 'json' }).subscribe((res)=>{
       const arr = res.split(" ");
       this.token = arr[0];
       if(this.token){
